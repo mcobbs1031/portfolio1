@@ -1,0 +1,224 @@
+body {
+    font-family: 'Poiret One', sans-serif;
+    background-color: black;
+    color: hotpink;
+    font-size: 1rem;
+}
+
+/**header**/
+
+header {
+    align-items: baseline;
+}
+
+#svg {
+    max-width: 100px;
+    max-height: 100px;
+    float: left;
+    padding: 20px;
+
+}
+
+#name {
+   padding-top: 6rem;
+   margin-bottom: 0;
+}
+
+nav {
+    float: right;
+    
+}
+
+a {
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    color: hotpink;
+    text-decoration: none;
+    
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+/**main**/
+
+#hi {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.splash {
+    
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(4, 4rem);
+    
+}
+
+.me {
+    clip-path: circle();
+    grid-column: 2;
+}
+
+.one {
+    grid-column-start: 3;
+    grid-column-end: auto;
+    align-content: start;
+    font-size: 2rem;
+}
+
+.two {
+    grid-column: 3;
+    grid-row: 2;
+    font-size: 2rem;
+
+}
+
+.three {
+    grid-column: 3;
+    grid-row: 3;
+    text-align: center;
+    font-size: 2rem;
+    justify-self: end;
+}
+
+.four {
+    grid-column: 4;
+    grid-row: 4;
+    font-size: 2rem;
+    align-items: start;
+}
+
+/**work**/
+
+#worktop {
+    text-align: center;
+}
+
+.work {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    justify-self: center;
+    margin-top: 4rem;
+    font-family: 'Shrikhand', serif;
+    font-size: 4rem;
+    padding: 2rem;
+    color: #ed1f79;
+}
+
+.webwork {
+    background-image: url(webdesign.jpg);
+    min-width: 600px;
+    min-height: 200px;
+    filter: opacity(80%);
+}
+
+.smwork {
+    background-image: url(socialdesign.jpg);
+    max-width: 400px;
+    min-height: 400px;
+    filter: opacity(80%);
+    justify-self: center;
+}
+
+.uxwork {
+    background-image: url(uxdesign.jpg);
+    max-width: 600px;
+    min-height: 600px;
+    filter: opacity(80%);
+}
+
+.photowork {
+    grid-column: 1/span4;
+    background-image: url(phgraphy.jpg);
+    max-width: 1000px;
+    min-height: 400px;
+    filter: opacity(80%);
+}
+
+.web, .sm, .ux, .photo {
+    padding-top: 14rem;
+    text-align: center;
+    text-shadow: 1px 2px 2px greenyellow;
+}
+
+/**about**/
+
+.top {
+    text-align: center;
+}
+
+.me2 {
+    max-width: 600px;
+    max-height: 600px;
+    float: right;
+    -webkit-shape-outside:circle;
+    clip-path: circle();
+    shape-outside: circle();
+}
+
+.about {
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid;
+    max-width: 1200px;
+    align-items: center;
+}
+ .about2 {
+    padding: 4rem 0rem 4rem 4rem;
+    
+ }
+
+ /**contact**/
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #4cd9c6;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #6fe8d7;
+}
+
+.container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact {
+    text-align: center;
+}
+
+/**media**/
+
+@media  screen and (max-width:480px) {
+    .splash {
+        display: block;
+        
+    }
+    
+    .work {
+        display: block;
+        font-size: 2rem;
+        padding: 0%;
+    }
+
+}
