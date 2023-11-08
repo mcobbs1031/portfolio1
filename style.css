@@ -1,10 +1,44 @@
-body {
-    font-family: 'Poiret One', sans-serif;
+html {
+    width: 100%;
+    height: 100%;
     background-color: black;
-    color: hotpink;
-    font-size: 1rem;
 }
 
+body {
+    font-family: 'Poiret One', sans-serif;
+    background-color: transparent;
+    color: rgb(241, 174, 208);
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.horse {
+    background-image: url(runhorse2.svg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    opacity: .25;
+}
+
+h1 {
+    font-family: 'Shrikhand', serif;
+    font-size: 3rem;
+    color: #ed1f79;
+    -webkit-text-stroke: .3px black;
+    text-shadow: 2px 2px 2px rgb(241, 174, 208);
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+li {
+    font-size: 1.4rem;
+}
 /**header**/
 
 header {
@@ -26,19 +60,20 @@ header {
 
 nav {
     float: right;
-    
 }
 
 a {
     padding-right: 2rem;
-    font-size: 1.5rem;
-    color: #ed1f79;
+    font-size: 2rem;
     text-decoration: none;
-    
+    font-family: 'Shrikhand', serif;
+    color: #ed1f79;
+    text-shadow: 2px 2px 1px greenyellow;
 }
 
 a:hover {
     color: greenyellow;
+    text-shadow: 2px 2px 2px #ed1f79;
 }
 
 /**main**/
@@ -46,48 +81,67 @@ a:hover {
 #hi {
     text-align: center;
     padding-top: 100px;
+    font-family: 'Shrikhand', serif;
+    font-size: 3rem;
+    color: #ed1f79;
+    text-shadow: 2px 2px 2px rgb(241, 174, 208);
 }
 
 .splash {
-    
+    font-family: 'Shrikhand', serif;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(4, 4rem);
-    
-}
-
-.me {
-    clip-path: circle();
-    grid-column: 2;
+    padding-bottom: 2rem;
+    margin: auto;
+    color: #ed1f79;
+    text-shadow: 3px 3px 0px rgb(241, 174, 208);
 }
 
 .one {
-    grid-column-start: 3;
-    grid-column-end: auto;
-    align-content: start;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    align-self: center;
     font-size: 2rem;
+}
+
+.twostar {
+    grid-column: 3;
+    grid-row: 2;
+    align-self: end;
 }
 
 .two {
     grid-column: 3;
     grid-row: 2;
     font-size: 2rem;
-
+    padding-left: 2rem;
 }
 
-.three {
-    grid-column: 3;
+.threestar {
+    grid-column: 4;
     grid-row: 3;
-    text-align: center;
+    align-self: end;
+}
+.three {
+    grid-column: 4;
+    grid-row: 3;
     font-size: 2rem;
-    justify-self: end;
+    padding-left: 2rem;
+}
+
+.fourstar {
+    grid-column-start: 5;
+    grid-row: 4;
+    align-self: end;
 }
 
 .four {
-    grid-column: 4;
+    grid-column-start: 5;
+    grid-column-end: 7;
     grid-row: 4;
     font-size: 2rem;
-    align-items: start;
+    padding-left: 2rem;
 }
 
 /**work**/
@@ -98,62 +152,36 @@ a:hover {
 
 .work {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-template-columns: repeat(4,1fr);
     gap: 2rem;
-    justify-self: center;
     margin-top: 4rem;
     justify-items: center;
 }
 
 .im2 {
-    max-width: 400px;
-    max-height: 300px;
+    width: 300px;
+    height: 250px;
     object-fit: contain;
-   
+    border: 1px solid rgb(241, 174, 208);
+    display: block;
+    margin: auto;
+    background-color: black;
+    border-radius: 10%;
 }
 
 .worktitle {
     font-family: 'Shrikhand', serif;
-    padding: 2rem;
+    padding: 1rem;
     color: #ed1f79;
     text-align: center;
-    text-shadow: 1px 2px 2px greenyellow;
+    text-shadow: 1px 2px 1px greenyellow;
 }
 
-//.webwork {
-    background-image: url(webdesign.jpg);
-    min-width: 600px;
-    min-height: 200px;
-    filter: opacity(80%);
-}
-
-//.smwork {
-    background-image: url(socialdesign.jpg);
-    max-width: 400px;
-    min-height: 400px;
-    filter: opacity(80%);
-    justify-self: center;
-}
-
-//.uxwork {
-    background-image: url(uxdesign.jpg);
-    max-width: 600px;
-    min-height: 600px;
-    filter: opacity(80%);
-}
-
-//.photowork {
-    grid-column: 1/span4;
-    background-image: url(phgraphy.jpg);
-    max-width: 1000px;
-    min-height: 400px;
-    filter: opacity(80%);
-}
-
-.web, .sm, .ux, .photo {
-    padding-top: 14rem;
-    text-align: center;
-    text-shadow: 1px 2px 2px greenyellow;
+.webwork, .smwork, .uxwork, .photowork {
+    padding: 2rem;
+    border: 4px solid #ed1f79;
+    border-radius: 10%;
+    backdrop-filter: blur(10px);
 }
 
 /**about**/
@@ -164,8 +192,6 @@ a:hover {
 
 .me2 {
     align-self: baseline;
-    max-width: 600px;
-    max-height: 600px;
     float: right;
     -webkit-shape-outside:circle;
     clip-path: circle();
@@ -175,9 +201,11 @@ a:hover {
 .about {
     margin-left: auto;
     margin-right: auto;
-    border: 3px solid;
+    border: 3px solid #6fe8d7;
+    border-radius: 10%;
     max-width: 1000px;
     align-items: center;
+    backdrop-filter: blur(20px);
 }
  .about2 {
     padding: 4rem 0rem 4rem 4rem;
@@ -222,10 +250,15 @@ input[type=submit]:hover {
 
 /**media**/
 
-@media  screen and (max-width:480px) {
+@media  screen and (max-width:900px) {
+
+    nav a {
+        display: block;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
     .splash {
         display: block;
-        
     }
     
     .work {
